@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 01</title>
+</head>
+<style>
+    *{
+        font-family: sans-serif;
+    }
+</style>
+<body>
+    
+</body>
+    <center><h1>Exercise 01</h1></center>
+    <center><h4> Write a JavaScript program to display the current day and time</h4></center>
+    <center><p id="output"></p></center>
+<script>
+        const output = document.getElementById("output");
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        // output.innerHTML = get_Days + ", " + get_Months + " " + new Date().getDate() + ", " + new Date().getFullYear() + " " + hours + ":" + minutes + ":" + seconds;
+        
+        const display =  () => {
+            const get_Days = days[new Date().getDay()];
+        const get_Months = months[new Date().getMonth()];
+        const hours = new Date().getHours();
+        const minutes = new Date().getMinutes();
+        const seconds = new Date().getSeconds();
+            output.innerHTML = get_Days + ", " + get_Months + " " + new Date().getDate() + ", " + new Date().getFullYear() + " " + hours + ":" + minutes + ":" + seconds;
+            // console.log(1);
+            
+        
+        }
+
+        setInterval(display, 1000);
+        
+        
+        
+        
+</script>
+</html>
