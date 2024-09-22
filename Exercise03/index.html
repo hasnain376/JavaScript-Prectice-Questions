@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 03</title>
+</head>
+<style>
+    *{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+</style>
+<body>
+    <center><h1>Exercise 03</h1></center>
+    <center><p>Write a JavaScript program to find the area of a triangle</p></center>
+    <center><p id="result"></p></center>
+</body>
+
+    <script>
+        const side_1 = prompt("Enter the first side of the triangle: ");
+        const side_2 = prompt("Enter the second side of the triangle: ");
+        const side_3 = prompt("Enter the third side of the triangle: ");
+
+        const s = (parseInt(side_1) + parseInt(side_2) + parseInt(side_3)) / 2;
+
+        const area = Math.sqrt(s * (s - side_1) * (s - side_2) * (s - side_3));
+        document.getElementById("result").innerHTML = "The area of the triangle is: " + area;
+        
+        
+        
+        
+    </script>
+</html>
